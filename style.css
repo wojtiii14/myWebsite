@@ -1,0 +1,614 @@
+body
+{
+    /* Background pattern from toptal.com */
+    /* background-image: url('img/email-pattern.png'); */
+    font-family: "Lato";
+    overflow-x: hidden;
+}
+
+span {
+  font-size: 22px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    opacity: 0.9;
+    backdrop-filter: blur(0.1);
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -7px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+/* Stylowanie logo w pasku nawigacyjnym */
+.navbar img {
+  height: 50px;
+  width: auto;
+}
+
+  #container {
+      width: 500px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  #container img {
+      border-radius: 10px;
+      margin: 10px;
+      width: 500px;
+      /* width: 200px; */
+      /* border-style: solid; */
+
+  }
+
+  p {
+      /* justify-content: left; */
+      margin: 10px;
+      padding: 10px;
+      font-size: 28px;
+      background-color: white;
+      border-radius: 10px;
+      opacity: 0.8;
+      /* border-style: solid; */
+  }
+  
+  #flex-cont {
+    display: flex;
+  }
+
+  form {
+      margin: 10px;
+      padding: 10px;
+      font-size: 28px;
+      background-color: white;
+      border-radius: 10px;
+      opacity: 0.8;
+      /* border-style: solid; */
+  }
+
+  input[type=text] {
+      text-align: center;
+      margin: 10px;
+      padding: 10px;
+      font-size: 28px;
+      border-radius: 10px;
+      border-style: solid;
+    }
+
+    input[type=button], input[type=submit] {
+      background-color: #1982f3;
+      width: 100px;
+      border-radius: 10px;
+      border-style: solid;
+      border-color: black;
+      font-size: 24px;
+      color: white;
+      padding: 10px;
+      /* text-decoration: none; */
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    input[type=button]:hover, input[type=submit]:hover {
+      background-color: #0065d7;
+    }
+
+    input[type="checkbox"] {
+      appearance: auto;
+      -webkit-appearance: auto;
+      -moz-appearance: auto;
+      width: 20px;
+      height: 20px;
+    }
+
+    input[type=text]:focus {
+      outline: none;
+    }
+
+    .footer {
+      background-color: #333;
+      margin-left: -10px;
+      margin-right: -10px;
+      margin-bottom: -10px;
+      color: #fff;
+      padding: 20px;
+      opacity: 0.9;
+      text-align: center;
+    }
+
+    h1, h2, h3 {
+      font-size: 64px;
+      margin: 30px;
+    }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    opacity: 0.9;
+    backdrop-filter: blur(0.1);
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -7px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+/* Stylowanie logo w pasku nawigacyjnym */
+.navbar img {
+  height: 50px;
+  width: auto;
+}
+
+  #container {
+      width: 600px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  #container img {
+      border-radius: 10px;
+      margin: 10px;
+      width: 500px;
+      /* width: 200px; */
+      /* border-style: solid; */
+
+  }
+
+  p {
+      /* justify-content: left; */
+      margin: 10px;
+      padding: 10px;
+      font-size: 28px;
+      background-color: white;
+      border-radius: 10px;
+      opacity: 0.8;
+      /* border-style: solid; */
+  }
+  
+  #flex-cont {
+    display: flex;
+  }
+
+  form {
+      margin: 10px;
+      padding: 10px;
+      font-size: 28px;
+      background-color: white;
+      border-radius: 10px;
+      opacity: 0.8;
+      /* border-style: solid; */
+  }
+
+  input[type=text] {
+      text-align: center;
+      margin: 10px;
+      padding: 10px;
+      font-size: 28px;
+      border-radius: 10px;
+      border-style: solid;
+    }
+
+    input[type=button], input[type=submit] {
+      background-color: #1982f3;
+      width: 100px;
+      border-radius: 10px;
+      border-style: solid;
+      border-color: black;
+      font-size: 24px;
+      color: white;
+      padding: 10px;
+      /* text-decoration: none; */
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    input[type=button]:hover, input[type=submit]:hover {
+      background-color: #0065d7;
+    }
+
+    input[type="checkbox"] {
+      appearance: auto;
+      -webkit-appearance: auto;
+      -moz-appearance: auto;
+      width: 20px;
+      height: 20px;
+    }
+
+    input[type=text]:focus {
+      outline: none;
+    }
+
+    .footer {
+      background-color: #333;
+      margin-left: -10px;
+      margin-right: -10px;
+      margin-bottom: -10px;
+      color: #fff;
+      padding: 20px;
+      opacity: 0.9;
+      text-align: center;
+    }
+
+    h1, h2, h3 {
+      font-size: 64px;
+      margin: 30px;
+    }
+}  
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    opacity: 0.9;
+    backdrop-filter: blur(0.1);
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -7px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  /* Stylowanie logo w pasku nawigacyjnym */
+  .navbar img {
+    height: 50px;
+    width: auto;
+  }
+
+    #container {
+        width: 700px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #container img {
+        border-radius: 10px;
+        margin: 10px;
+        width: 500px;
+        /* width: 200px; */
+        /* border-style: solid; */
+
+    }
+
+    p {
+        /* justify-content: left; */
+        margin: 10px;
+        padding: 10px;
+        font-size: 28px;
+        background-color: white;
+        border-radius: 10px;
+        opacity: 0.8;
+        /* border-style: solid; */
+    }
+    
+    #flex-cont {
+      display: flex;
+    }
+
+    form {
+        margin: 10px;
+        padding: 10px;
+        font-size: 28px;
+        background-color: white;
+        border-radius: 10px;
+        opacity: 0.8;
+        /* border-style: solid; */
+    }
+
+    input[type=text] {
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        font-size: 28px;
+        border-radius: 10px;
+        border-style: solid;
+      }
+
+      input[type=button], input[type=submit] {
+        background-color: #1982f3;
+        width: 100px;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: black;
+        font-size: 24px;
+        color: white;
+        padding: 10px;
+        /* text-decoration: none; */
+        margin: 10px;
+        cursor: pointer;
+      }
+
+      input[type=button]:hover, input[type=submit]:hover {
+        background-color: #0065d7;
+      }
+
+      input[type="checkbox"] {
+        appearance: auto;
+        -webkit-appearance: auto;
+        -moz-appearance: auto;
+        width: 20px;
+        height: 20px;
+      }
+
+      input[type=text]:focus {
+        outline: none;
+      }
+
+      .footer {
+        background-color: #333;
+        margin-left: -10px;
+        margin-right: -10px;
+        margin-bottom: -10px;
+        color: #fff;
+        padding: 20px;
+        opacity: 0.9;
+        text-align: center;
+      }
+
+      h1, h2, h3 {
+        font-size: 64px;
+        margin: 30px;
+      }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    opacity: 0.9;
+    backdrop-filter: blur(0.1);
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -7px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  /* Stylowanie logo w pasku nawigacyjnym */
+  .navbar img {
+    height: 50px;
+    width: auto;
+  }
+
+    #container {
+        width: 900px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #container img {
+        border-radius: 10px;
+        margin: 10px;
+        width: 400px;
+        /* width: 200px; */
+        /* border-style: solid; */
+
+    }
+
+    p {
+        /* justify-content: left; */
+        margin: 10px;
+        padding: 10px;
+        font-size: 28px;
+        background-color: white;
+        border-radius: 10px;
+        opacity: 0.8;
+        /* border-style: solid; */
+    }
+    
+    flex-cont {
+      display: flex;
+    }
+
+    form {
+        margin: 10px;
+        padding: 10px;
+        font-size: 28px;
+        background-color: white;
+        border-radius: 10px;
+        opacity: 0.8;
+        /* border-style: solid; */
+    }
+
+    input[type=text] {
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        font-size: 28px;
+        border-radius: 10px;
+        border-style: solid;
+      }
+
+      input[type=button], input[type=submit] {
+        background-color: #1982f3;
+        width: 100px;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: black;
+        font-size: 24px;
+        color: white;
+        padding: 10px;
+        /* text-decoration: none; */
+        margin: 10px;
+        cursor: pointer;
+      }
+
+      input[type=button]:hover, input[type=submit]:hover {
+        background-color: #0065d7;
+      }
+
+      input[type="checkbox"] {
+        appearance: auto;
+        -webkit-appearance: auto;
+        -moz-appearance: auto;
+        width: 20px;
+        height: 20px;
+      }
+
+      input[type=text]:focus {
+        outline: none;
+      }
+
+      .footer {
+        background-color: #333;
+        margin-left: -10px;
+        margin-right: -10px;
+        margin-bottom: -10px;
+        color: #fff;
+        padding: 20px;
+        opacity: 0.9;
+        text-align: center;
+      }
+
+      h1, h2, h3 {
+        font-size: 64px;
+        margin: 30px;
+      }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    opacity: 0.9;
+    backdrop-filter: blur(0.1);
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -7px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  /* Stylowanie logo w pasku nawigacyjnym */
+  .navbar img {
+    height: 50px;
+    width: auto;
+  }
+
+    #container {
+        width: 1000px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #container img {
+        border-radius: 10px;
+        margin: 10px;
+        width: 400px;
+        /* width: 200px; */
+        /* border-style: solid; */
+
+    }
+
+    p {
+        /* justify-content: left; */
+        margin: 10px;
+        padding: 10px;
+        font-size: 28px;
+        background-color: white;
+        border-radius: 10px;
+        opacity: 0.8;
+        /* border-style: solid; */
+    }
+    
+    flex-cont {
+      display: flex;
+    }
+
+    form {
+        margin: 10px;
+        padding: 10px;
+        font-size: 28px;
+        background-color: white;
+        border-radius: 10px;
+        opacity: 0.8;
+        /* border-style: solid; */
+    }
+
+    input[type=text] {
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        font-size: 28px;
+        border-radius: 10px;
+        border-style: solid;
+      }
+
+      input[type=button], input[type=submit] {
+        background-color: #1982f3;
+        width: 100px;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: black;
+        font-size: 24px;
+        color: white;
+        padding: 10px;
+        /* text-decoration: none; */
+        margin: 10px;
+        cursor: pointer;
+      }
+
+      input[type=button]:hover, input[type=submit]:hover {
+        background-color: #0065d7;
+      }
+
+      input[type="checkbox"] {
+        appearance: auto;
+        -webkit-appearance: auto;
+        -moz-appearance: auto;
+        width: 20px;
+        height: 20px;
+      }
+
+      input[type=text]:focus {
+        outline: none;
+      }
+
+      .footer {
+        background-color: #333;
+        margin-left: -10px;
+        margin-right: -10px;
+        margin-bottom: -10px;
+        color: #fff;
+        padding: 20px;
+        opacity: 0.9;
+        text-align: center;
+      }
+
+      h1, h2, h3 {
+        font-size: 64px;
+        margin: 30px;
+      }
+
+      
+      
+}
