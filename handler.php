@@ -79,6 +79,27 @@ if ($FullName == "")
 //  header('Location: index.php#contact');
 
  if($vd == true) {
+
+	// insert client to database
+
+	require_once "connect.php";
+
+	$connection = @new mysqli($host, $db_user, $db_password, $db_name, $db_port);
+
+	// Check connection
+	if ($connection->connect_errno != 0) {
+		$_SESSION['sql_error'] = "Error: " . $connection->connect_errno;
+	}
+	else {
+		$sqlquery = "INSERT INTO `clients` (`Name and Surname` , `E-mail`, `Phone Number`)
+	VALUES ('$FullName', '$email', '$phone')";
+
+	mysqli_query($connection, $sqlquery);
+
+	}
+	
+
+
 	//przygotuj i wyślij maila	   
 	$temat = 'New client registered!';	
 	
@@ -107,14 +128,13 @@ if ($FullName == "")
 	unset($_SESSION['mail']);
 	unset($_SESSION['phone']);
 
-	header('Location: index.php#contact');  
+	header('Location: index.php#contact');
+
+	$connection->close();
 
 } else {
 	$_SESSION['final'] = '<span style="color:red">Validation failed!</span>';
 	header('Location: index.php#contact');
 };
-	
-
-
 
 ?>
