@@ -30,6 +30,30 @@ $_SESSION['phone'] = $phone;
 
 $vd = true;
 
+require_once "connect.php";
+
+$connection = @new mysqli($host, $db_user, $db_password, $db_name, $db_port);
+
+// Sprawdzenie połączenia
+if ($connection->connect_error) {
+    die("Błąd połączenia: " . $connection->connect_error);
+}
+
+// Zapytanie SQL do sprawdzenia, czy e-mail istnieje w bazie danych
+$query = "SELECT * FROM `clients` WHERE `E-mail` = '$email'";
+
+$query2 = "SELECT * FROM `clients` WHERE `Phone Number` = '$phone'";
+
+// $result = $connection->query($query);
+
+$result = mysqli_query($connection, $query);
+
+$result2 = mysqli_query($connection, $query2);
+
+// Zamykanie połączenia
+$connection->close();
+
+
 if ($FullName == "")
  {
 	$_SESSION['error'] = '<span style="color:red">Have not filled Name and surname</span>';
@@ -54,7 +78,11 @@ if ($FullName == "")
 	$_SESSION['error1'] = '<span style="color:red">Wrong e-mail address format</span>';
 
     $vd = false;
- };
+ }elseif ($result->num_rows > 0) {
+    $_SESSION['error1'] = '<span style="color:red">Given e-mail already exists in my database</span>';
+
+	$vd = false;
+};
 
  if ($phone == "") //telefon
  {	 
@@ -66,6 +94,10 @@ if ($FullName == "")
 
 	$vd = false;
 
+} elseif ($result2->num_rows > 0) {
+    $_SESSION['error2'] = '<span style="color:red">Given phone number already exists in my database</span>';
+
+	$vd = false;
 };
 
  if ($PersonalDataAgree != 'on') // Przetwarzanie danych osobowych
