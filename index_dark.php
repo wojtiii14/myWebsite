@@ -16,7 +16,7 @@
     <meta name="keywords" content=" ">
 
     <link rel="icon" type="image/x-icon" href=" ">
-    <link id="theme" rel = "stylesheet" href = "style_light.css" type = "text/css" />
+    <link id="theme" rel = "stylesheet" href = "style_dark.css" type = "text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
 <body>
     <div class="navbar">
         <img src="img/logo.png" alt="Logo">
-        <a href='index_dark.php'><img src="img/light_dark_toggle.png" alt="Logo"></a>
+        <a href='index.php'><img src="img/light_dark_toggle.png" alt="Logo"></a>
     </div>
 
     <div id="container">
@@ -39,7 +39,7 @@
      Jeśli potrzebujesz mojej pomocy skontaktuj się ze&nbsp;mną za&nbsp;pomocą formularza poniżej.
     </p>
 
-    <form id="contact" method="post" action="handler.php">
+    <form id="contact" method="post" action="handler_dark.php">
 
                 <h2>Formularz Kontaktowy</h2>
 
