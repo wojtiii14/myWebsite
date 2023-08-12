@@ -56,53 +56,53 @@ $connection->close();
 
 if ($FullName == "")
  {
-	$_SESSION['error'] = '<span style="color:red">Have not filled Name and surname</span>';
+	$_SESSION['error'] = '<span style="color:red">Nie wypełniono pola imię i nazwisko</span>';
 
  	$vd = false;
  } 
  elseif (strlen($FullName) < 7 and strlen($FullName) > 0) 
  {
-	$_SESSION['error'] = '<span style="color:red">Wrong format of Name and Surname</span>';
+	$_SESSION['error'] = '<span style="color:red">Zły format imienia i nazwiska</span>';
 
     $vd = false;
  };
 
  if ($email == "") //email
  {
-	$_SESSION['error1'] = '<span style="color:red">Have not filled e-mail address</span>';
+	$_SESSION['error1'] = '<span style="color:red">Nie wypełniono pola adres e-mail</span>';
 
     $vd = false;
  }
  elseif (!valid_email($email)) 
  {
-	$_SESSION['error1'] = '<span style="color:red">Wrong e-mail address format</span>';
+	$_SESSION['error1'] = '<span style="color:red">Niepoprawny format adresu e-mail</span>';
 
     $vd = false;
  }elseif ($result->num_rows > 0) {
-    $_SESSION['error1'] = '<span style="color:red">Given e-mail already exists in my database</span>';
+    $_SESSION['error1'] = '<span style="color:red">Podany e-mail mam już w bazie danych</span>';
 
 	$vd = false;
 };
 
  if ($phone == "") //telefon
  {	 
-	$_SESSION['error2'] = '<span style="color:red">Have not filled phone number</span>';
+	$_SESSION['error2'] = '<span style="color:red">Nie wypełniono pola numer telefonu</span>';
 
     $vd = false;
  } elseif(!valid_phone($phone)) {
-	$_SESSION['error2'] = '<span style="color:red">Wrong phone number format</span>';
+	$_SESSION['error2'] = '<span style="color:red">Nieprawidłowy format numeru telefonu</span>';
 
 	$vd = false;
 
 } elseif ($result2->num_rows > 0) {
-    $_SESSION['error2'] = '<span style="color:red">Given phone number already exists in my database</span>';
+    $_SESSION['error2'] = '<span style="color:red">Podany numer mam już w bazie danych</span>';
 
 	$vd = false;
 };
 
  if ($PersonalDataAgree != 'on') // Przetwarzanie danych osobowych
  {
-	$_SESSION['error3'] = '<span style="color:red">Tick that field</span>';
+	$_SESSION['error3'] = '<span style="color:red">Zaznacz to pole</span>';
 
     $vd = false;
 
@@ -130,18 +130,16 @@ if ($FullName == "")
 
 	}
 	
-
-
 	//przygotuj i wyślij maila	   
-	$temat = 'New client registered!';	
+	$temat = 'Rejestracja nowego klienta!';	
 	
-	$wiadomosc = 'Name and Surname: '.$FullName."<br/>";
+	$wiadomosc = 'Imię i Nazwisko: '.$FullName."<br/>";
     $wiadomosc .= ' E-mail: '.$email."<br/>";
 	$wiadomosc .= ' Telefon: '.$phone."<br/>";
 
-	$temat2 = "Wojciech Kaczmarek - Thank You for contacting me!";
+	$temat2 = "Wojciech Kaczmarek - Dzięki za kontakt!";
 
-	$wiadomosc2 = "Thank You for contacting me. I will reach to you as soon as possible!<br/>";
+	$wiadomosc2 = "Dziękuje za zgłoszenie. Odezwę się tak szybko jak to możliwe!<br/>";
 	$wiadomosc2 .= "Wojciech Kaczmarek<br/>";
 	$wiadomosc2 .= "wojtak123@gmail.com<br/>";
 	$wiadomosc2 .= "tel. +48 668 792 084<br/>";
@@ -155,7 +153,7 @@ if ($FullName == "")
 	$adres2 = $email;
 	mail($adres, $temat, $wiadomosc, $od);
 	mail($adres2, $temat2, $wiadomosc2, $od);
-	$_SESSION['final'] = '<span style="color:green">I will reach to you as soon as possible!</span>';
+	$_SESSION['final'] = '<span style="color:green">Odezwę się tak szybko jak to możliwe!</span>';
 	unset($_SESSION['fullName']);
 	unset($_SESSION['mail']);
 	unset($_SESSION['phone']);
@@ -165,7 +163,7 @@ if ($FullName == "")
 	$connection->close();
 
 } else {
-	$_SESSION['final'] = '<span style="color:red">Validation failed!</span>';
+	$_SESSION['final'] = '<span style="color:red">Walidacja nie powiodła się!</span>';
 	header('Location: index.php#contact');
 };
 

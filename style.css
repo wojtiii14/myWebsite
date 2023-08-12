@@ -2,12 +2,18 @@ body
 {
     /* Background pattern from toptal.com */
     /* background-image: url('img/email-pattern.png'); */
-    font-family: "Lato";
+    font-family: 'Instrument Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
     overflow-x: hidden;
+    background-color: rgb(34, 34, 34);
+}
+
+#slider {
+  min-height: 400px;
 }
 
 span {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -29,7 +35,7 @@ span {
 
 /* Stylowanie logo w pasku nawigacyjnym */
 .navbar img {
-  height: 50px;
+  height: 70px;
   width: auto;
 }
 
@@ -43,9 +49,13 @@ span {
   #container img {
       border-radius: 10px;
       margin: 10px;
-      width: 500px;
+      width: 400px;
+      background-color: white;
       /* width: 200px; */
-      /* border-style: solid; */
+      border-style: solid;
+      border-width: 5px;
+      border-radius: 250px;
+
 
   }
 
@@ -53,10 +63,11 @@ span {
       /* justify-content: left; */
       margin: 10px;
       padding: 10px;
-      font-size: 28px;
-      background-color: white;
+      font-size: 36px;
+      /* background-color: rgb(30, 30, 30); */
       border-radius: 10px;
       opacity: 0.8;
+      color: white;
       /* border-style: solid; */
   }
   
@@ -65,10 +76,11 @@ span {
   }
 
   form {
+      color: white;
       margin: 10px;
       padding: 10px;
       font-size: 28px;
-      background-color: white;
+      /* background-color: white; */
       border-radius: 10px;
       opacity: 0.8;
       /* border-style: solid; */
@@ -76,21 +88,31 @@ span {
 
   input[type=text] {
       text-align: center;
+      height: 40px;
       margin: 10px;
       padding: 10px;
-      font-size: 28px;
-      border-radius: 10px;
+      font-size: 36px;
+      color: white;
+      border-radius: 50px;
       border-style: solid;
+      border-color: black;
+      border-width: 5px;
+      background-color: #333;
+    }
+
+    input[type=text]:focus {
+      border-color: rgb(102, 230, 173);
     }
 
     input[type=button], input[type=submit] {
-      background-color: #1982f3;
-      width: 100px;
-      border-radius: 10px;
+      background-color: rgb(122, 250, 193);
+      width: 150px;
+      border-radius: 50px;
       border-style: solid;
       border-color: black;
-      font-size: 24px;
-      color: white;
+      border-width: 5px;
+      font-size: 32px;
+      color: black;
       padding: 10px;
       /* text-decoration: none; */
       margin: 10px;
@@ -98,7 +120,7 @@ span {
     }
 
     input[type=button]:hover, input[type=submit]:hover {
-      background-color: #0065d7;
+      background-color: rgb(102, 230, 173);
     }
 
     input[type="checkbox"] {
@@ -118,6 +140,7 @@ span {
       margin-left: -10px;
       margin-right: -10px;
       margin-bottom: -10px;
+      font-size: 24px;
       color: #fff;
       padding: 20px;
       opacity: 0.9;
@@ -125,8 +148,9 @@ span {
     }
 
     h1, h2, h3 {
-      font-size: 64px;
+      font-size: 72px;
       margin: 30px;
+      color: rgb(122, 250, 193);
     }
 } 
 
@@ -149,7 +173,7 @@ span {
 
 /* Stylowanie logo w pasku nawigacyjnym */
 .navbar img {
-  height: 50px;
+  height: 70px;
   width: auto;
 }
 
@@ -163,91 +187,109 @@ span {
   #container img {
       border-radius: 10px;
       margin: 10px;
-      width: 500px;
+      width: 400px;
+      background-color: white;
       /* width: 200px; */
-      /* border-style: solid; */
+      border-style: solid;
+      border-radius: 250px;
+      border-width: 5px;
+
 
   }
 
   p {
-      /* justify-content: left; */
-      margin: 10px;
-      padding: 10px;
-      font-size: 28px;
-      background-color: white;
-      border-radius: 10px;
-      opacity: 0.8;
-      /* border-style: solid; */
-  }
+    /* justify-content: left; */
+    margin: 10px;
+    padding: 10px;
+    font-size: 36px;
+    /* background-color: rgb(30, 30, 30); */
+    border-radius: 10px;
+    opacity: 0.8;
+    color: white;
+    /* border-style: solid; */
+}
   
   #flex-cont {
     display: flex;
   }
 
   form {
-      margin: 10px;
-      padding: 10px;
-      font-size: 28px;
-      background-color: white;
-      border-radius: 10px;
-      opacity: 0.8;
-      /* border-style: solid; */
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    font-size: 28px;
+    /* background-color: white; */
+    border-radius: 10px;
+    opacity: 0.8;
+    /* border-style: solid; */
+}
+
+input[type=text] {
+    text-align: center;
+    height: 40px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 36px;
+    color: white;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    background-color: #333;
   }
 
-  input[type=text] {
-      text-align: center;
-      margin: 10px;
-      padding: 10px;
-      font-size: 28px;
-      border-radius: 10px;
-      border-style: solid;
-    }
+  input[type=text]:focus {
+    border-color: rgb(102, 230, 173);
+  }
 
-    input[type=button], input[type=submit] {
-      background-color: #1982f3;
-      width: 100px;
-      border-radius: 10px;
-      border-style: solid;
-      border-color: black;
-      font-size: 24px;
-      color: white;
-      padding: 10px;
-      /* text-decoration: none; */
-      margin: 10px;
-      cursor: pointer;
-    }
+  input[type=button], input[type=submit] {
+    background-color: rgb(122, 250, 193);
+    width: 150px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    font-size: 32px;
+    color: black;
+    padding: 10px;
+    /* text-decoration: none; */
+    margin: 10px;
+    cursor: pointer;
+  }
 
-    input[type=button]:hover, input[type=submit]:hover {
-      background-color: #0065d7;
-    }
+  input[type=button]:hover, input[type=submit]:hover {
+    background-color: rgb(102, 230, 173);
+  }
 
-    input[type="checkbox"] {
-      appearance: auto;
-      -webkit-appearance: auto;
-      -moz-appearance: auto;
-      width: 20px;
-      height: 20px;
-    }
+  input[type="checkbox"] {
+    appearance: auto;
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    width: 20px;
+    height: 20px;
+  }
 
-    input[type=text]:focus {
-      outline: none;
-    }
+  input[type=text]:focus {
+    outline: none;
+  }
 
-    .footer {
-      background-color: #333;
-      margin-left: -10px;
-      margin-right: -10px;
-      margin-bottom: -10px;
-      color: #fff;
-      padding: 20px;
-      opacity: 0.9;
-      text-align: center;
-    }
+  .footer {
+    background-color: #333;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: -10px;
+    font-size: 24px;
+    color: #fff;
+    padding: 20px;
+    opacity: 0.9;
+    text-align: center;
+  }
 
-    h1, h2, h3 {
-      font-size: 64px;
-      margin: 30px;
-    }
+  h1, h2, h3 {
+    font-size: 72px;
+    margin: 30px;
+    color: rgb(122, 250, 193);
+  }
 }  
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -269,7 +311,7 @@ span {
   
   /* Stylowanie logo w pasku nawigacyjnym */
   .navbar img {
-    height: 50px;
+    height: 70px;
     width: auto;
   }
 
@@ -281,93 +323,108 @@ span {
     }
 
     #container img {
-        border-radius: 10px;
+        border-radius: 250px;
         margin: 10px;
-        width: 500px;
+        background-color: white;
+        width: 400px;
         /* width: 200px; */
-        /* border-style: solid; */
+        border-style: solid;
 
     }
 
     p {
-        /* justify-content: left; */
-        margin: 10px;
-        padding: 10px;
-        font-size: 28px;
-        background-color: white;
-        border-radius: 10px;
-        opacity: 0.8;
-        /* border-style: solid; */
-    }
+      /* justify-content: left; */
+      margin: 10px;
+      padding: 10px;
+      font-size: 36px;
+      /* background-color: rgb(30, 30, 30); */
+      border-radius: 10px;
+      opacity: 0.8;
+      color: white;
+      /* border-style: solid; */
+  }
     
     #flex-cont {
       display: flex;
     }
 
     form {
-        margin: 10px;
-        padding: 10px;
-        font-size: 28px;
-        background-color: white;
-        border-radius: 10px;
-        opacity: 0.8;
-        /* border-style: solid; */
+      color: white;
+      margin: 10px;
+      padding: 10px;
+      font-size: 28px;
+      /* background-color: white; */
+      border-radius: 10px;
+      opacity: 0.8;
+      /* border-style: solid; */
+  }
+
+  input[type=text] {
+      text-align: center;
+      height: 40px;
+      margin: 10px;
+      padding: 10px;
+      font-size: 36px;
+      color: white;
+      border-radius: 50px;
+      border-style: solid;
+      border-color: black;
+      border-width: 5px;
+      background-color: #333;
     }
 
-    input[type=text] {
-        text-align: center;
-        margin: 10px;
-        padding: 10px;
-        font-size: 28px;
-        border-radius: 10px;
-        border-style: solid;
-      }
+    input[type=text]:focus {
+      border-color: rgb(102, 230, 173);
+    }
 
-      input[type=button], input[type=submit] {
-        background-color: #1982f3;
-        width: 100px;
-        border-radius: 10px;
-        border-style: solid;
-        border-color: black;
-        font-size: 24px;
-        color: white;
-        padding: 10px;
-        /* text-decoration: none; */
-        margin: 10px;
-        cursor: pointer;
-      }
+    input[type=button], input[type=submit] {
+      background-color: rgb(122, 250, 193);
+      width: 150px;
+      border-radius: 50px;
+      border-style: solid;
+      border-color: black;
+      border-width: 5px;
+      font-size: 32px;
+      color: black;
+      padding: 10px;
+      /* text-decoration: none; */
+      margin: 10px;
+      cursor: pointer;
+    }
 
-      input[type=button]:hover, input[type=submit]:hover {
-        background-color: #0065d7;
-      }
+    input[type=button]:hover, input[type=submit]:hover {
+      background-color: rgb(102, 230, 173);
+    }
 
-      input[type="checkbox"] {
-        appearance: auto;
-        -webkit-appearance: auto;
-        -moz-appearance: auto;
-        width: 20px;
-        height: 20px;
-      }
+    input[type="checkbox"] {
+      appearance: auto;
+      -webkit-appearance: auto;
+      -moz-appearance: auto;
+      width: 20px;
+      height: 20px;
+    }
 
-      input[type=text]:focus {
-        outline: none;
-      }
+    input[type=text]:focus {
+      outline: none;
+    }
 
-      .footer {
-        background-color: #333;
-        margin-left: -10px;
-        margin-right: -10px;
-        margin-bottom: -10px;
-        color: #fff;
-        padding: 20px;
-        opacity: 0.9;
-        text-align: center;
-      }
+    .footer {
+      background-color: #333;
+      margin-left: -10px;
+      margin-right: -10px;
+      margin-bottom: -10px;
+      font-size: 24px;
+      color: #fff;
+      padding: 20px;
+      opacity: 0.9;
+      text-align: center;
+    }
 
-      h1, h2, h3 {
-        font-size: 64px;
-        margin: 30px;
-      }
+    h1, h2, h3 {
+      font-size: 72px;
+      margin: 30px;
+      color: rgb(122, 250, 193);
+    }
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -389,7 +446,7 @@ span {
   
   /* Stylowanie logo w pasku nawigacyjnym */
   .navbar img {
-    height: 50px;
+    height: 70px;
     width: auto;
   }
 
@@ -401,93 +458,108 @@ span {
     }
 
     #container img {
-        border-radius: 10px;
+        border-radius: 250px;
+        background-color: white;
         margin: 10px;
         width: 400px;
         /* width: 200px; */
-        /* border-style: solid; */
+        border-style: solid;
 
     }
 
     p {
-        /* justify-content: left; */
-        margin: 10px;
-        padding: 10px;
-        font-size: 28px;
-        background-color: white;
-        border-radius: 10px;
-        opacity: 0.8;
-        /* border-style: solid; */
-    }
+      /* justify-content: left; */
+      margin: 10px;
+      padding: 10px;
+      font-size: 36px;
+      /* background-color: rgb(30, 30, 30); */
+      border-radius: 10px;
+      opacity: 0.8;
+      color: white;
+      /* border-style: solid; */
+  }
     
     flex-cont {
       display: flex;
     }
 
     form {
-        margin: 10px;
-        padding: 10px;
-        font-size: 28px;
-        background-color: white;
-        border-radius: 10px;
-        opacity: 0.8;
-        /* border-style: solid; */
+      color: white;
+      margin: 10px;
+      padding: 10px;
+      font-size: 28px;
+      /* background-color: white; */
+      border-radius: 10px;
+      opacity: 0.8;
+      /* border-style: solid; */
+  }
+
+  input[type=text] {
+      text-align: center;
+      height: 40px;
+      margin: 10px;
+      padding: 10px;
+      font-size: 36px;
+      color: white;
+      border-radius: 50px;
+      border-style: solid;
+      border-color: black;
+      border-width: 5px;
+      background-color: #333;
     }
 
-    input[type=text] {
-        text-align: center;
-        margin: 10px;
-        padding: 10px;
-        font-size: 28px;
-        border-radius: 10px;
-        border-style: solid;
-      }
+    input[type=text]:focus {
+      border-color: rgb(102, 230, 173);
+    }
 
-      input[type=button], input[type=submit] {
-        background-color: #1982f3;
-        width: 100px;
-        border-radius: 10px;
-        border-style: solid;
-        border-color: black;
-        font-size: 24px;
-        color: white;
-        padding: 10px;
-        /* text-decoration: none; */
-        margin: 10px;
-        cursor: pointer;
-      }
+    input[type=button], input[type=submit] {
+      background-color: rgb(122, 250, 193);
+      width: 150px;
+      border-radius: 50px;
+      border-style: solid;
+      border-color: black;
+      border-width: 5px;
+      font-size: 32px;
+      color: black;
+      padding: 10px;
+      /* text-decoration: none; */
+      margin: 10px;
+      cursor: pointer;
+    }
 
-      input[type=button]:hover, input[type=submit]:hover {
-        background-color: #0065d7;
-      }
+    input[type=button]:hover, input[type=submit]:hover {
+      background-color: rgb(102, 230, 173);
+    }
 
-      input[type="checkbox"] {
-        appearance: auto;
-        -webkit-appearance: auto;
-        -moz-appearance: auto;
-        width: 20px;
-        height: 20px;
-      }
+    input[type="checkbox"] {
+      appearance: auto;
+      -webkit-appearance: auto;
+      -moz-appearance: auto;
+      width: 20px;
+      height: 20px;
+    }
 
-      input[type=text]:focus {
-        outline: none;
-      }
+    input[type=text]:focus {
+      outline: none;
+    }
 
-      .footer {
-        background-color: #333;
-        margin-left: -10px;
-        margin-right: -10px;
-        margin-bottom: -10px;
-        color: #fff;
-        padding: 20px;
-        opacity: 0.9;
-        text-align: center;
-      }
+    .footer {
+      background-color: #333;
+      margin-left: -10px;
+      margin-right: -10px;
+      margin-bottom: -10px;
+      font-size: 24px;
+      color: #fff;
+      padding: 20px;
+      opacity: 0.9;
+      text-align: center;
+    }
 
-      h1, h2, h3 {
-        font-size: 64px;
-        margin: 30px;
-      }
+    h1, h2, h3 {
+      font-size: 72px;
+      margin: 30px;
+      color: rgb(122, 250, 193);
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -521,94 +593,107 @@ span {
     }
 
     #container img {
-        border-radius: 10px;
+        border-radius: 250px;
         margin: 10px;
         width: 400px;
+        background-color: white;
         /* width: 200px; */
-        /* border-style: solid; */
+        border-style: solid;
 
     }
 
     p {
-        /* justify-content: left; */
-        margin: 10px;
-        padding: 10px;
-        font-size: 28px;
-        background-color: white;
-        border-radius: 10px;
-        opacity: 0.8;
-        /* border-style: solid; */
-    }
+      /* justify-content: left; */
+      margin: 10px;
+      padding: 10px;
+      font-size: 36px;
+      /* background-color: rgb(30, 30, 30); */
+      border-radius: 10px;
+      opacity: 0.8;
+      color: white;
+      /* border-style: solid; */
+  }
     
     flex-cont {
       display: flex;
     }
 
     form {
-        margin: 10px;
-        padding: 10px;
-        font-size: 28px;
-        background-color: white;
-        border-radius: 10px;
-        opacity: 0.8;
-        /* border-style: solid; */
+      color: white;
+      margin: 10px;
+      padding: 10px;
+      font-size: 28px;
+      /* background-color: white; */
+      border-radius: 10px;
+      opacity: 0.8;
+      /* border-style: solid; */
+  }
+
+  input[type=text] {
+      text-align: center;
+      height: 40px;
+      margin: 10px;
+      padding: 10px;
+      font-size: 36px;
+      color: white;
+      border-radius: 50px;
+      border-style: solid;
+      border-color: black;
+      border-width: 5px;
+      background-color: #333;
     }
 
-    input[type=text] {
-        text-align: center;
-        margin: 10px;
-        padding: 10px;
-        font-size: 28px;
-        border-radius: 10px;
-        border-style: solid;
-      }
+    input[type=text]:focus {
+      border-color: rgb(102, 230, 173);
+    }
 
-      input[type=button], input[type=submit] {
-        background-color: #1982f3;
-        width: 100px;
-        border-radius: 10px;
-        border-style: solid;
-        border-color: black;
-        font-size: 24px;
-        color: white;
-        padding: 10px;
-        /* text-decoration: none; */
-        margin: 10px;
-        cursor: pointer;
-      }
+    input[type=button], input[type=submit] {
+      background-color: rgb(122, 250, 193);
+      width: 150px;
+      border-radius: 50px;
+      border-style: solid;
+      border-color: black;
+      border-width: 5px;
+      font-size: 32px;
+      color: black;
+      padding: 10px;
+      /* text-decoration: none; */
+      margin: 10px;
+      cursor: pointer;
+    }
 
-      input[type=button]:hover, input[type=submit]:hover {
-        background-color: #0065d7;
-      }
+    input[type=button]:hover, input[type=submit]:hover {
+      background-color: rgb(102, 230, 173);
+    }
 
-      input[type="checkbox"] {
-        appearance: auto;
-        -webkit-appearance: auto;
-        -moz-appearance: auto;
-        width: 20px;
-        height: 20px;
-      }
+    input[type="checkbox"] {
+      appearance: auto;
+      -webkit-appearance: auto;
+      -moz-appearance: auto;
+      width: 20px;
+      height: 20px;
+    }
 
-      input[type=text]:focus {
-        outline: none;
-      }
+    input[type=text]:focus {
+      outline: none;
+    }
 
-      .footer {
-        background-color: #333;
-        margin-left: -10px;
-        margin-right: -10px;
-        margin-bottom: -10px;
-        color: #fff;
-        padding: 20px;
-        opacity: 0.9;
-        text-align: center;
-      }
+    .footer {
+      background-color: #333;
+      margin-left: -10px;
+      margin-right: -10px;
+      margin-bottom: -10px;
+      font-size: 24px;
+      color: #fff;
+      padding: 20px;
+      opacity: 0.9;
+      text-align: center;
+    }
 
-      h1, h2, h3 {
-        font-size: 64px;
-        margin: 30px;
-      }
+    h1, h2, h3 {
+      font-size: 72px;
+      margin: 30px;
+      color: rgb(122, 250, 193);
+    }
 
-      
-      
 }
