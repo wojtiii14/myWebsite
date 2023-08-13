@@ -20,16 +20,48 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    
+
+    <script type="text/javascript">
+
+        function saveThemePreference() {
+            let style = document.getElementById('theme').getAttribute('href');
+            localStorage.setItem('theme', style);
+        }
+
+        function loadSavedTheme() {
+            const savedTheme = localStorage.getItem('theme');
+
+            const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'style_dark.css' : 'style_light.css';
+
+            if (savedTheme) {
+                document.getElementById('theme').setAttribute('href', savedTheme);
+            } else {
+                document.getElementById('theme').setAttribute('href', preferredTheme);
+            }
+        }
+
+        function swapStyleSheet(sheet) {
+
+            let style = document.getElementById('theme').getAttribute('href');
+
+            if(style == 'style_light.css'){
+                document.getElementById('theme').setAttribute('href', 'style_dark.css');
+            }
+            else {
+                document.getElementById('theme').setAttribute('href', 'style_light.css');
+            }
+        }
+    </script>
+  
 </head>
-<body>
+<body onLoad="loadSavedTheme()">
     <div class="navbar">
         <img src="img/logo.png" alt="Logo">
-        <a href='index_dark.php'><img src="img/light_dark_toggle.png" alt="Logo"></a>
+        <img src="img/light_dark_toggle.png" onClick="swapStyleSheet(); saveThemePreference();">
     </div>
 
     <div id="container">
-     <img src="img/me_4.jpg">
+     <img src="img/me_4.JPG">
     
      <h1>Cześć, jestem Wojciech!</h1>
      <p>
