@@ -30,14 +30,14 @@
 </head>
 <body onLoad="loadSavedTheme()">
 <div class="navbar">
-        <img src="img/logo.png" alt="Logo">
-        <img src="img/light_dark_toggle.png" onClick="swapStyleSheet(); saveThemePreference();">
+    <a href="index.php"><img src="img/logo.png" alt="Logo"></a>
+    <img src="img/light_dark_toggle.png" onClick="swapStyleSheet(); saveThemePreference();">
     </div>
 
     <div id="container">
 
 <?php
-    echo "<p>Cześć ".$_SESSION['user']."</p>";
+    echo "<p>Cześć ".$_SESSION['user']."!</p>";
     echo "<a href='logout.php'><input type='button' value='Logout'></button></a>";
   ?>
 
@@ -47,6 +47,7 @@
         <th>Name and Surname</th>
         <th>E-mail</th>
         <th>Phone Number</th>
+        <th>Remove</th>
     </tr>
 
 <?php
@@ -72,6 +73,7 @@
                 echo "<td>" . $row["Name and Surname"] . "</td>";
                 echo "<td>" . $row["E-mail"] . "</td>";
                 echo "<td>" . $row["Phone Number"] . "</td>";
+                echo "<td><a href='delete.php?id=" . $row["ID"] . "'>Delete</a></td>";
                 echo "</tr>";
             }
         } else {

@@ -26,7 +26,7 @@
 </head>
 <body onLoad="loadSavedTheme()">
     <div class="navbar">
-        <img src="img/logo.png" alt="Logo">
+        <a href="index.php"><img src="img/logo.png" alt="Logo"></a>
         <img src="img/light_dark_toggle.png" onClick="swapStyleSheet(); saveThemePreference();">
     </div>
 
