@@ -39,15 +39,20 @@
 <?php
     echo "<p>Cześć ".$_SESSION['user']."!</p>";
     echo "<a href='logout.php'><input type='button' value='Logout'></button></a>";
-  ?>
+    $counterFile = 'counter.txt';
 
+    // Odczytaj aktualną wartość licznika
+    $counter = (int) file_get_contents($counterFile);
+    echo "<p>Liczba odwiedzin strony: $counter</p>";
+  ?>
+<h2>Klienci</h2>
 <table>
     <tr>
         <th>ID</th>
-        <th>Name and Surname</th>
+        <th>Imię i Nazwisko</th>
         <th>E-mail</th>
-        <th>Phone Number</th>
-        <th>Remove</th>
+        <th>Telefon</th>
+        <th>Usuwanie</th>
     </tr>
 
 <?php
@@ -73,7 +78,7 @@
                 echo "<td>" . $row["Name and Surname"] . "</td>";
                 echo "<td>" . $row["E-mail"] . "</td>";
                 echo "<td>" . $row["Phone Number"] . "</td>";
-                echo "<td><a href='delete.php?id=" . $row["ID"] . "'>Delete</a></td>";
+                echo "<td><a href='delete.php?id=" . $row["ID"] . "'>Usuń</a></td>";
                 echo "</tr>";
             }
         } else {

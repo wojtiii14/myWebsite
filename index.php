@@ -31,12 +31,13 @@
     </div>
 
     <div id="container">
-     <img src="img/me_4.jpg">
     
+     <img src="img/me_4.jpg">
      <h1>Cześć, jestem Wojciech!</h1>
+     <?php include 'counter.php'; ?>
      <p>
      Jestem studentem Informatyki i&nbsp;pasjonuje się budowaniem witryn&nbsp;internetowych!
-     Technologie przeze mnie używane to: HTML, CSS, PHP i&nbsp;JavaScript.
+     Technologie przeze mnie używane to: HTML, CSS, PHP, JavaScript i&nbsp;SQL.
      Podziwiam minimalistyczny design i&nbsp;jego zastosowanie w&nbsp;świecie technologii.
      Jeśli potrzebujesz mojej pomocy skontaktuj się ze&nbsp;mną za&nbsp;pomocą formularza poniżej.
     </p>
