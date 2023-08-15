@@ -45,7 +45,7 @@
     $counter = (int) file_get_contents($counterFile);
     echo "<p>Liczba odwiedzin strony: $counter</p>";
   ?>
-<h2>Klienci</h2>
+<div class="table_desc">Klienci</div>
 <table>
     <tr>
         <th>ID</th>

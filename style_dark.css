@@ -162,12 +162,12 @@ input[type=text]:focus, input[type=password]:focus {
       /* border-style: solid; */
   }
 
-  input[type=text] {
+  input[type=text], input[type=password] {
       text-align: center;
       height: 40px;
       margin: 10px;
       padding: 10px;
-      font-size: 36px;
+      font-size: 32px;
       color: white;
       border-radius: 50px;
       border-style: solid;
@@ -176,7 +176,7 @@ input[type=text]:focus, input[type=password]:focus {
       background-color: #333;
     }
 
-    input[type=text]:focus {
+    input[type=text]:focus, input[type=password]:focus {
       border-color: rgb(102, 230, 173);
     }
 
@@ -224,8 +224,18 @@ input[type=text]:focus, input[type=password]:focus {
     }
 
     h1, h2, h3 {
-      font-size: 72px;
+      font-size: 64px;
       margin: 30px;
+      color: rgb(122, 250, 193);
+    }
+
+    table {
+      font-size: 12px;
+    }
+
+    .table_desc {
+      font-size: 32px;
+      margin: 10px;
       color: rgb(122, 250, 193);
     }
 } 
@@ -366,6 +376,16 @@ input[type=text] {
     margin: 30px;
     color: rgb(122, 250, 193);
   }
+
+  table {
+    font-size: 14px;
+  }
+
+  .table_desc {
+    font-size: 36px;
+    margin: 10px;
+    color: rgb(122, 250, 193);
+  }
 }  
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -499,6 +519,16 @@ input[type=text] {
     h1, h2, h3 {
       font-size: 72px;
       margin: 30px;
+      color: rgb(122, 250, 193);
+    }
+
+    table {
+      font-size: 18px;
+    }
+  
+    .table_desc {
+      font-size: 42px;
+      margin: 10px;
       color: rgb(122, 250, 193);
     }
 } 
@@ -636,6 +666,16 @@ input[type=text] {
       margin: 30px;
       color: rgb(122, 250, 193);
     }
+
+    table {
+      font-size: 20px;
+    }
+  
+    .table_desc {
+      font-size: 46px;
+      margin: 10px;
+      color: rgb(122, 250, 193);
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -769,6 +809,16 @@ input[type=text] {
     h1, h2, h3 {
       font-size: 72px;
       margin: 30px;
+      color: rgb(122, 250, 193);
+    }
+
+    table {
+      font-size: 28px;
+    }
+
+    .table_desc {
+      font-size: 64px;
+      margin: 10px;
       color: rgb(122, 250, 193);
     }
 

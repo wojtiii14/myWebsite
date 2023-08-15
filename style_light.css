@@ -28,13 +28,6 @@ a:hover {
   
 }
 
-
-
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
 #slider {
   min-height: 400px;
 }
@@ -55,7 +48,6 @@ table {
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
-  font-size: 28px;
   opacity: 0.8;
 }
 
@@ -171,7 +163,7 @@ input[type=text], input[type=password]{
   height: 40px;
   margin: 10px;
   padding: 10px;
-  font-size: 36px;
+  font-size: 32px;
   color: rgb(34, 34, 34);
   border-radius: 50px;
   border-style: solid;
@@ -228,8 +220,18 @@ input[type=text]:focus, input[type=password]:focus {
     }
 
     h1, h2, h3 {
-      font-size: 72px;
+      font-size: 64px;
       margin: 30px;
+      color: rgb(127, 72, 214);
+    }
+
+    table {
+      font-size: 12px;
+    }
+
+    .table_desc {
+      font-size: 32px;
+      margin: 10px;
       color: rgb(127, 72, 214);
     }
 } 
@@ -370,6 +372,16 @@ input[type=text]:focus, input[type=password]:focus {
     margin: 30px;
     color: rgb(127, 72, 214);
   }
+
+  table {
+      font-size: 14px;
+    }
+
+    .table_desc {
+      font-size: 36px;
+      margin: 10px;
+      color: rgb(127, 72, 214);
+    }
 }  
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -502,6 +514,16 @@ input[type=text]:focus, input[type=password]:focus {
     h1, h2, h3 {
       font-size: 72px;
       margin: 30px;
+      color: rgb(127, 72, 214);
+    }
+
+    table {
+      font-size: 18px;
+    }
+
+    .table_desc {
+      font-size: 42px;
+      margin: 10px;
       color: rgb(127, 72, 214);
     }
 } 
@@ -639,6 +661,16 @@ input[type=text]:focus, input[type=password]:focus {
       margin: 30px;
       color: rgb(127, 72, 214);
     }
+
+    table {
+      font-size: 20px;
+    }
+
+    .table_desc {
+      font-size: 46px;
+      margin: 10px;
+      color: rgb(127, 72, 214);
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -772,6 +804,16 @@ input[type=text]:focus, input[type=password]:focus {
     h1, h2, h3 {
       font-size: 72px;
       margin: 30px;
+      color: rgb(127, 72, 214);
+    }
+
+    table {
+      font-size: 28px;
+    }
+
+    .table_desc {
+      font-size: 64px;
+      margin: 10px;
       color: rgb(127, 72, 214);
     }
 
