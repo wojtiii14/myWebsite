@@ -1,12 +1,18 @@
 <?php
-
     session_start();
-    
-    if((isset($_SESSION['logged'])) && ($_SESSION['logged']==true))
+
+    if(!isset($_SESSION['logged']))
     {
-      header('Location: panel.php');
+      header('Location: admin.php');
       exit();
     }
+
+    if (isset($_GET['id']) && is_numeric($_GET['id'])) {
+        $id = $_GET['id'];
+    } else {
+        header('Location: panel.php');
+    }
+
   ?>
 
 <!DOCTYPE HTML>
@@ -36,23 +42,12 @@
     </div>
 
     <div id="container">
-        <h1>Panel Administratora</h1>
-    <form action="login.php" method="post">
-        <input type = "text" name = "username" placeholder="Login" class = "box"/>
-        </br>
-        <input type = "password" name = "password" placeholder="Hasło" class = "box" />
-        </br>
-        <input type="submit" value="Login">
-        
-    </form>
-  <?php
-    if(isset($_SESSION['error']))
-    {
-      echo $_SESSION['error'];unset($_SESSION['error']);
-    }
-  ?>
-  </div>
-<div class="footer">
+        <p>Czy na pewno chcesz usunąć klienta?</p>
+        <a href="delete.php?id=<?php echo $id; unset($_GET['id']);?>"><input type="button" value="Tak"></a>
+        <a href="panel.php"><input type="button" value="Nie"></a>
+
+    </div>
+    <div class="footer">
   Wojciech Kaczmarek &copy;
   <script>
         var CurrentYear = new Date().getFullYear()

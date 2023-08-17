@@ -1,8 +1,12 @@
 <?php
+    session_start();
 
-    session_start()
-
-?>
+    if(!isset($_SESSION['logged']))
+    {
+      header('Location: admin.php');
+      exit();
+    }
+  ?>
 
 <!DOCTYPE HTML>
 <html lang="pl">
@@ -25,26 +29,16 @@
   
 </head>
 <body onLoad="loadSavedTheme()">
-    <div class="navbar">
-        <a href="index.php"><img src="img/logo.png" alt="Logo"></a>
-        <img src="img/light_dark_toggle.png" onClick="swapStyleSheet(); saveThemePreference();">
+<div class="navbar">
+    <a href="index.php"><img src="img/logo.png" alt="Logo"></a>
+    <img src="img/light_dark_toggle.png" onClick="swapStyleSheet(); saveThemePreference();">
     </div>
 
     <div id="container">
-    
-     <img src="img/me_4.jpg">
-     <h1>Cześć, jestem Wojciech!</h1>
-     <?php include 'counter.php'; ?>
-     <p>
-     Jestem studentem Informatyki i&nbsp;pasjonuje się budowaniem witryn&nbsp;internetowych!
-     Technologie przeze mnie używane to: HTML, CSS, PHP, JavaScript i&nbsp;SQL.
-     Podziwiam minimalistyczny design i&nbsp;jego zastosowanie w&nbsp;świecie technologii.
-     Jeśli potrzebujesz mojej pomocy skontaktuj się ze&nbsp;mną za&nbsp;pomocą formularza poniżej.
-    </p>
 
-    <form id="contact" method="post" action="handler.php">
+    <form id="contact" method="post" action="adding_handler.php">
 
-                <h2>Formularz Kontaktowy</h2>
+                <h2>Dodaj nowego klienta</h2>
 
                 <input type="text" placeholder="Imię i Nazwisko" name="fullName" value="<?php if(isset($_SESSION['fullName'])) {echo $_SESSION['fullName']; unset($_SESSION['fullName']);} ?>"></br><?php echo $_SESSION['error']; unset($_SESSION['error']);?>
                 <br/>
@@ -54,18 +48,13 @@
                 
                 <input type="text" placeholder="Numer Telefonu" name = "phoneNumber" value="<?php if(isset($_SESSION['phone'])) {echo $_SESSION['phone']; unset($_SESSION['phone']);} ?>"></br><?php echo $_SESSION['error2']; unset($_SESSION['error2']);?>
                 <br/>
-
-                <label>
-                    <input type="checkbox" name="PersonalDataAgree" value="on">
-                    Wyrażam zgodę na przetwarzanie<br/>moich danych osobowych<br/>w celach kontaktowych.</br>
-                </label>
-                <?php echo $_SESSION['error3']; unset($_SESSION['error3']);?></br>
-                <input type="submit" value="Wyślij"></br>
+                <input type="submit" value="Dodaj"></br>
                 <?php echo $_SESSION['final']; unset($_SESSION['final']);?><br/>
         </form>
-  </div>
 
-  <div class="footer">
+    </div>
+
+    <div class="footer">
   Wojciech Kaczmarek &copy;
   <script>
         var CurrentYear = new Date().getFullYear()

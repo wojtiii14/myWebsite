@@ -19,7 +19,7 @@
     <meta name="description" content=" ">
     <meta name="keywords" content=" ">
 
-    <link rel="icon" type="image/x-icon" href=" ">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link id="theme" rel = "stylesheet" href = "style_light.css" type = "text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -78,7 +78,7 @@
                 echo "<td>" . $row["Name and Surname"] . "</td>";
                 echo "<td>" . $row["E-mail"] . "</td>";
                 echo "<td>" . $row["Phone Number"] . "</td>";
-                echo "<td><a href='delete.php?id=" . $row["ID"] . "'>Usuń</a></td>";
+                echo "<td><a href='decision.php?id=" . $row["ID"] . "'>Usuń</a></td>";
                 echo "</tr>";
             }
         } else {
@@ -90,6 +90,8 @@
 ?>
 
 </table>
+
+<a href='add.php'><input type='button' value='Dodaj'></button></a>
 
 </div>
 <div class="footer">
